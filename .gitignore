@@ -134,3 +134,32 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# VS Code settings
+.vscode/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE specific files
+.idea/
+*.swp
+*.swo
+
+# Next.js specific
+.vercel
+.env*.local
+*.tsbuildinfo
+
+# Build and development artifacts
+public/sitemap.xml
+public/robots.txt
+public/sw.js
+public/workbox-*.js
+.eslintcache
