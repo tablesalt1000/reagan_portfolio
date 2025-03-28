@@ -1,0 +1,42 @@
+import React from 'react';
+import Layout from '../components/Layout';
+import WorkGrid from '../components/WorkGrid';
+import Link from 'next/link';
+
+export default function Home() {
+  return (
+    <Layout pageTitle="My Creative Portfolio">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-4">Welcome to My Creative Space</h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          A curated collection of my articles, stories, photography, and creative inspirations.
+        </p>
+      </div>
+
+      <section className="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">Recent Work</h2>
+          <WorkGrid limit={4} />
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">Explore</h2>
+          <div className="space-y-4">
+            <Link href="/articles" className="block bg-blue-100 p-4 rounded hover:bg-blue-200 transition">
+              Articles
+            </Link>
+            <Link href="/stories" className="block bg-green-100 p-4 rounded hover:bg-green-200 transition">
+              Short Stories
+            </Link>
+            <Link href="/photography" className="block bg-purple-100 p-4 rounded hover:bg-purple-200 transition">
+              Photography
+            </Link>
+            <Link href="/inspiration" className="block bg-orange-100 p-4 rounded hover:bg-orange-200 transition">
+              What Inspires Me
+            </Link>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
